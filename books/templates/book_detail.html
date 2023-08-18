@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>{{ book.title }}</h1>
+            <p><strong>Author:</strong> {{ book.author.name }}</p>
+            <p><strong>ISBN:</strong> {{ book.isbn }}</p>
+            <p><strong>Description:</strong> {{ book.description }}</p>
+
+            {% if book.is_available %}
+            <span class="badge bg-success">Available</span>
+            {% else %}
+            <span class="badge bg-warning">Borrowed</span>
+            {% endif %}
+
+            {% if user.is_authenticated %}
+            <hr>
+            <h2>History</h2>
+            <ul>
+                {% for loan in book.book_loans.all %}
+                <li>
+                    {{ loan.loan_datetime|date:"Y-m-d" }} -
+                    {% if loan.return_datetime %}
+                    {{ loan.return_datetime|date:"Y-m-d" }}
+                    {% else %}
+                    not returned
+                    {% endif %}
+                    by {{ loan.user.full_name }}</li>
+                {% empty %}
+                No history
+                {% endfor %}
+            </ul>
+            <form method="post" action="{% url 'books:book_detail' uuid=book.uuid %}">
+                {{ form.as_p }}
+                {% csrf_token %}
+                {% if book.is_available %}
+                <input type="submit" value="Borrow a book" class="btn btn-primary">
+                {% else %}
+                <input type="submit" value="Return a book" class="btn btn-primary">
+                {% endif %}
+            </form>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,582 @@
+[
+    {
+        "model": "books.author",
+        "pk": 1,
+        "fields": {
+            "uuid": "88f68445-685f-4ea2-870e-c06ec58d2132",
+            "name": "George Orwell",
+            "description": ""
+        }
+    },
+    {
+        "model": "books.author",
+        "pk": 2,
+        "fields": {
+            "uuid": "5e99fff5-736c-43c8-8cd4-3af5d61a9458",
+            "name": "Harper Lee",
+            "description": ""
+        }
+    },
+    {
+        "model": "books.author",
+        "pk": 3,
+        "fields": {
+            "uuid": "deb6d1b4-2e40-4f1e-9f28-37ae5b869a07",
+            "name": "F. Scott Fitzgerald",
+            "description": ""
+        }
+    },
+    {
+        "model": "books.author",
+        "pk": 4,
+        "fields": {
+            "uuid": "a53fdce0-27c1-47f9-8acf-b4c374e71fef",
+            "name": "Gabriel Garc\u00eda M\u00e1rquez",
+            "description": ""
+        }
+    },
+    {
+        "model": "books.author",
+        "pk": 5,
+        "fields": {
+            "uuid": "037ab3b4-1cff-455b-92a1-5654883a3848",
+            "name": "Jane Austen",
+            "description": ""
+        }
+    },
+    {
+        "model": "books.author",
+        "pk": 6,
+        "fields": {
+            "uuid": "28dcee52-8663-4a3b-8de8-2a63c8c09180",
+            "name": "Aldous Huxley",
+            "description": ""
+        }
+    },
+    {
+        "model": "books.author",
+        "pk": 7,
+        "fields": {
+            "uuid": "8c305a21-c495-4d98-b2a5-51d5e6f0df17",
+            "name": "Leo Tolstoy",
+            "description": ""
+        }
+    },
+    {
+        "model": "books.author",
+        "pk": 8,
+        "fields": {
+            "uuid": "278c634f-6648-4afa-a983-f9a41149e230",
+            "name": "Herman Melville",
+            "description": ""
+        }
+    },
+    {
+        "model": "books.author",
+        "pk": 11,
+        "fields": {
+            "uuid": "c2c493be-e91e-44a8-87fe-fdb441b98e89",
+            "name": "Emily Bront\u00eb",
+            "description": ""
+        }
+    },
+    {
+        "model": "books.author",
+        "pk": 12,
+        "fields": {
+            "uuid": "86e1e599-c32f-4c68-b0c0-92f0dca914b0",
+            "name": "J.R.R. Tolkien",
+            "description": ""
+        }
+    },
+    {
+        "model": "books.author",
+        "pk": 13,
+        "fields": {
+            "uuid": "cdfe0e20-af74-4796-ad01-420a5dd07a28",
+            "name": "Homer",
+            "description": ""
+        }
+    },
+    {
+        "model": "books.author",
+        "pk": 14,
+        "fields": {
+            "uuid": "33b3bc1c-6fc6-4d9c-bc52-3b91ac7f144e",
+            "name": "Dante Alighieri",
+            "description": ""
+        }
+    },
+    {
+        "model": "books.author",
+        "pk": 15,
+        "fields": {
+            "uuid": "60c2a588-da8e-4ec0-995f-81597f488523",
+            "name": "Ray Bradbury",
+            "description": ""
+        }
+    },
+    {
+        "model": "books.author",
+        "pk": 16,
+        "fields": {
+            "uuid": "6d27d9d3-4e6b-47ad-b600-f2f75c4ceb45",
+            "name": "Charles Dickens",
+            "description": ""
+        }
+    },
+    {
+        "model": "books.author",
+        "pk": 17,
+        "fields": {
+            "uuid": "98b8c687-484f-490b-9edd-776a3b174c51",
+            "name": "Miguel de Cervantes",
+            "description": ""
+        }
+    },
+    {
+        "model": "books.author",
+        "pk": 18,
+        "fields": {
+            "uuid": "81234889-3a33-4c2f-b07e-dede6b93f690",
+            "name": "Toni Morrison",
+            "description": ""
+        }
+    },
+    {
+        "model": "books.author",
+        "pk": 19,
+        "fields": {
+            "uuid": "75f183af-6249-445a-a8ea-f31175eb26d9",
+            "name": "Vladimir Nabokov",
+            "description": ""
+        }
+    },
+    {
+        "model": "books.author",
+        "pk": 21,
+        "fields": {
+            "uuid": "de9aadef-9269-45d1-9d00-49b8c6bb8dd5",
+            "name": "Fyodor Dostoevsky",
+            "description": ""
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 1,
+        "fields": {
+            "uuid": "3efaa48c-e00a-46f6-8199-d38a5f138a05",
+            "title": "1984",
+            "description": "A dystopian novel about a totalitarian regime that uses surveillance to control its citizens.",
+            "isbn": "9780451524935",
+            "author": 1
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 2,
+        "fields": {
+            "uuid": "1b1bd8fd-9791-438a-8b7a-d5421a934eb0",
+            "title": "Pride and Prejudice",
+            "description": "The manners and matrimonial machinations among the British middle class of the early 19th century.",
+            "isbn": "9780679783268",
+            "author": 5
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 3,
+        "fields": {
+            "uuid": "66bddc8d-9720-483c-a27c-340646e865af",
+            "title": "To Kill a Mockingbird",
+            "description": "A novel of racism and moral growth in the American South.",
+            "isbn": "9780061120084",
+            "author": 2
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 4,
+        "fields": {
+            "uuid": "ece5fdcd-32fe-4579-9137-8764ed70b3a2",
+            "title": "The Great Gatsby",
+            "description": "The story of the mysteriously wealthy Jay Gatsby and his love for Daisy Buchanan.",
+            "isbn": "9780743273565",
+            "author": 3
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 5,
+        "fields": {
+            "uuid": "694ff129-a4b4-4caf-a66a-6a34ae6d8ae7",
+            "title": "Moby Dick",
+            "description": "The quest of the obsessive Captain Ahab who seeks vengeance on the white whale.",
+            "isbn": "9781503280786",
+            "author": 8
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 6,
+        "fields": {
+            "uuid": "c976e6be-151e-407b-a2ca-89413dcd6737",
+            "title": "The Odyssey",
+            "description": "The epic journey of Odysseus, the hero of Ancient Greece...",
+            "isbn": "9780140268867",
+            "author": 13
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 7,
+        "fields": {
+            "uuid": "95442b74-5075-43b1-a92a-b8d89afd222a",
+            "title": "War and Peace",
+            "description": "The epic tale of Napoleon\u2019s invasion of Russia.",
+            "isbn": "9781400079988",
+            "author": 7
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 8,
+        "fields": {
+            "uuid": "8a6326fc-ce6b-4f07-bf44-2aca130622c0",
+            "title": "Crime and Punishment",
+            "description": "A novel of guilt, moral struggle, and the search for redemption.",
+            "isbn": "9780486415871",
+            "author": 21
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 9,
+        "fields": {
+            "uuid": "160da5e6-e51c-4b01-8fd5-fd9c6ce05355",
+            "title": "Brave New World",
+            "description": "A vision of a future where the world population is controlled and sedated.",
+            "isbn": "9780060850524",
+            "author": 6
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 10,
+        "fields": {
+            "uuid": "2ef1e6a6-87c8-4b8d-ba35-69c5b1db846a",
+            "title": "One Hundred Years of Solitude",
+            "description": "The story of the Buend\u00eda family in the fictional town of Macondo.",
+            "isbn": "9780060883287",
+            "author": 4
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 11,
+        "fields": {
+            "uuid": "33b68e3d-ce1e-442f-9137-c6c715fa351d",
+            "title": "Wuthering Heights",
+            "description": "A passionate and tragic story of love and revenge on the Yorkshire moors.",
+            "isbn": "9780141439556",
+            "author": 11
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 12,
+        "fields": {
+            "uuid": "6d5bec75-a7ac-4d53-80ac-6d9e2edb5f9e",
+            "title": "The Hobbit",
+            "description": "The adventure of Bilbo Baggins as he sets out with a group of dwarves to reclaim a stolen treasure.",
+            "isbn": "9780547928227",
+            "author": 12
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 13,
+        "fields": {
+            "uuid": "47f7ba50-8aa9-453a-818b-da53d5e474ff",
+            "title": "The Odyssey",
+            "description": "The epic journey of Odysseus as he tries to return home from the Trojan war.",
+            "isbn": "9780140268867",
+            "author": 13
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 14,
+        "fields": {
+            "uuid": "115959fd-d309-4426-9e7a-bab05ee9943c",
+            "title": "The Divine Comedy",
+            "description": "Dante\u2019s journey through the three realms of the dead: Inferno, Purgatorio, and Paradiso.",
+            "isbn": "9780140448955",
+            "author": 14
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 15,
+        "fields": {
+            "uuid": "b3a1052a-a32b-4d83-9f89-d2a5d0a06fff",
+            "title": "Fahrenheit 451",
+            "description": "In a future society, books are banned and \"firemen\" burn any that are found.",
+            "isbn": "9781451673319",
+            "author": 15
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 16,
+        "fields": {
+            "uuid": "7475710e-d7a2-4660-8535-398ef4de5a90",
+            "title": "A Tale of Two Cities",
+            "description": "Set before and during the French Revolution, it follows characters on both sides of the English Channel.",
+            "isbn": "9780141031736",
+            "author": 16
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 17,
+        "fields": {
+            "uuid": "7ef86ee6-60c8-4613-a427-40d9f7fb3be1",
+            "title": "Don Quixote",
+            "description": "The story of a nobleman who becomes a self-styled knight and sets out to right the world\u2019s wrongs.",
+            "isbn": "9780060934347",
+            "author": 17
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 18,
+        "fields": {
+            "uuid": "518651e3-94c3-45b4-9451-f009a9d26a58",
+            "title": "Beloved",
+            "description": "After the American Civil War, a former slave struggles to overcome her past.",
+            "isbn": "9781400033416",
+            "author": 18
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 19,
+        "fields": {
+            "uuid": "2355c57c-6560-4131-b09f-113f9c2f70dd",
+            "title": "Lolita",
+            "description": "A controversial novel about a middle-aged man\u2019s obsession with a 12-year-old girl.",
+            "isbn": "9780679723165",
+            "author": 19
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 20,
+        "fields": {
+            "uuid": "28972ef9-70de-4b8c-8030-cdcc23cd55c6",
+            "title": "Anna Karenina",
+            "description": "A novel exploring a diverse range of topics throughout Russian society, particularly the question of love and family.",
+            "isbn": "9780140449174",
+            "author": 7
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 21,
+        "fields": {
+            "uuid": "1d91cbcd-88af-4e4b-afd6-1e26161317d3",
+            "title": "The Brothers Karamazov",
+            "description": "A philosophical novel that enters deeply into questions of God, free will, and morality.",
+            "isbn": "9780140449242",
+            "author": 21
+        }
+    },
+    {
+        "model": "books.bookloan",
+        "pk": 1,
+        "fields": {
+            "uuid": "eb4229e7-437c-4d7b-a758-4d4fad6011ec",
+            "book": 1,
+            "user": 2,
+            "loan_datetime": "2023-08-18T12:48:48.023Z",
+            "return_datetime": "2023-08-18T13:00:12.068Z"
+        }
+    },
+    {
+        "model": "books.bookloan",
+        "pk": 2,
+        "fields": {
+            "uuid": "6f1225ca-7901-45ef-a2aa-1f0994bbf3fa",
+            "book": 1,
+            "user": 2,
+            "loan_datetime": "2023-08-18T13:00:13.690Z",
+            "return_datetime": "2023-08-18T13:00:15.068Z"
+        }
+    },
+    {
+        "model": "books.bookloan",
+        "pk": 3,
+        "fields": {
+            "uuid": "efef7da1-f62f-4ab9-ab40-b749ca4a409d",
+            "book": 1,
+            "user": 2,
+            "loan_datetime": "2023-08-18T13:00:15.961Z",
+            "return_datetime": "2023-08-18T13:00:16.859Z"
+        }
+    },
+    {
+        "model": "books.bookloan",
+        "pk": 4,
+        "fields": {
+            "uuid": "fe2b4812-a5e5-4a83-a9aa-2f3171eb210e",
+            "book": 1,
+            "user": 2,
+            "loan_datetime": "2023-08-18T13:00:17.652Z",
+            "return_datetime": "2023-08-18T13:00:18.819Z"
+        }
+    },
+    {
+        "model": "books.bookloan",
+        "pk": 5,
+        "fields": {
+            "uuid": "1b26bccf-e454-4157-894d-a67094d7eb13",
+            "book": 1,
+            "user": 2,
+            "loan_datetime": "2023-08-18T13:00:19.652Z",
+            "return_datetime": "2023-08-18T13:12:41.139Z"
+        }
+    },
+    {
+        "model": "books.bookloan",
+        "pk": 6,
+        "fields": {
+            "uuid": "07fe0e07-801d-4e82-a39b-451740444394",
+            "book": 1,
+            "user": 2,
+            "loan_datetime": "2023-08-18T13:12:42.390Z",
+            "return_datetime": "2023-08-18T13:12:43.749Z"
+        }
+    },
+    {
+        "model": "books.bookloan",
+        "pk": 7,
+        "fields": {
+            "uuid": "d543534c-8bad-4781-b39c-d8ba14c07896",
+            "book": 1,
+            "user": 2,
+            "loan_datetime": "2023-08-18T13:12:43.935Z",
+            "return_datetime": "2023-08-18T13:12:44.850Z"
+        }
+    },
+    {
+        "model": "books.bookloan",
+        "pk": 8,
+        "fields": {
+            "uuid": "ec1548e3-36af-47c7-a0ff-efdb77980f8c",
+            "book": 1,
+            "user": 2,
+            "loan_datetime": "2023-08-18T13:12:45.589Z",
+            "return_datetime": "2023-08-18T13:12:46.745Z"
+        }
+    },
+    {
+        "model": "books.bookloan",
+        "pk": 9,
+        "fields": {
+            "uuid": "9d996894-47cc-4459-a96f-87f96c22ed70",
+            "book": 1,
+            "user": 2,
+            "loan_datetime": "2023-08-18T13:12:47.505Z",
+            "return_datetime": "2023-08-18T13:12:48.415Z"
+        }
+    },
+    {
+        "model": "books.bookloan",
+        "pk": 10,
+        "fields": {
+            "uuid": "2b9b9e89-cb46-4a0c-9ab4-952d01b5be06",
+            "book": 1,
+            "user": 2,
+            "loan_datetime": "2023-08-18T13:12:49.079Z",
+            "return_datetime": "2023-08-18T13:12:49.963Z"
+        }
+    },
+    {
+        "model": "books.bookloan",
+        "pk": 11,
+        "fields": {
+            "uuid": "9f4a93c8-f570-4459-a18d-3aa60711b102",
+            "book": 1,
+            "user": 2,
+            "loan_datetime": "2023-08-18T13:12:50.788Z",
+            "return_datetime": "2023-08-18T13:13:02.927Z"
+        }
+    },
+    {
+        "model": "books.bookloan",
+        "pk": 12,
+        "fields": {
+            "uuid": "e1d5a368-971f-4950-af4c-4ac6b80a1df5",
+            "book": 1,
+            "user": 2,
+            "loan_datetime": "2023-08-18T13:13:03.125Z",
+            "return_datetime": "2023-08-18T13:13:03.716Z"
+        }
+    },
+    {
+        "model": "books.bookloan",
+        "pk": 13,
+        "fields": {
+            "uuid": "128a8353-ddee-4be0-8c13-f4afe58104e5",
+            "book": 1,
+            "user": 2,
+            "loan_datetime": "2023-08-18T13:13:04.370Z",
+            "return_datetime": "2023-08-18T13:13:05.115Z"
+        }
+    },
+    {
+        "model": "books.bookloan",
+        "pk": 14,
+        "fields": {
+            "uuid": "8ada8230-0902-471f-b861-cc6f976d4ca1",
+            "book": 1,
+            "user": 2,
+            "loan_datetime": "2023-08-18T13:13:05.675Z",
+            "return_datetime": "2023-08-18T13:14:48.830Z"
+        }
+    },
+    {
+        "model": "books.bookloan",
+        "pk": 15,
+        "fields": {
+            "uuid": "b0f28410-b29d-489a-b67b-17a703983673",
+            "book": 1,
+            "user": 2,
+            "loan_datetime": "2023-08-18T13:14:49.302Z",
+            "return_datetime": "2023-08-18T13:14:49.589Z"
+        }
+    },
+    {
+        "model": "books.bookloan",
+        "pk": 16,
+        "fields": {
+            "uuid": "a4da5c6b-a9b3-48b7-b116-e07885d8c540",
+            "book": 1,
+            "user": 2,
+            "loan_datetime": "2023-08-18T13:14:50.058Z",
+            "return_datetime": "2023-08-18T13:14:51.573Z"
+        }
+    },
+    {
+        "model": "books.bookloan",
+        "pk": 17,
+        "fields": {
+            "uuid": "d20d63d7-4592-479e-9be3-3f9ffc347e78",
+            "book": 1,
+            "user": 2,
+            "loan_datetime": "2023-08-18T13:15:33.895Z",
+            "return_datetime": null
+        }
+    }
+]

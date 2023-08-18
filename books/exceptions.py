@@ -1,0 +1,2 @@
+class IllegalBookLoanException(Exception):
+    pass

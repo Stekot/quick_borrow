@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "quick-borrow"
+version = "0.1.0"
+description = "System for self-checkout library"
+authors = ["Štěpán Kotek <stepan.kotek@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "quick_borrow"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Django = "^4.2.4"
+psycopg2 = "^2.9.7"
+uuid = "^1.30"
+pillow = "^10.0.0"
+djangorestframework = "^3.14.0"
+django-grappelli = "^3.0.7"
+
+
+[tool.poetry.group.dev.dependencies]
+django-silk = "^5.0.3"
+django-pytest = "^0.2.0"
+pytest = "^7.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
