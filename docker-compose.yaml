@@ -2,45 +2,27 @@ version: '3.8'
 
 services:
   web:
-    build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    image: stekotek/quick_borrow:v1
+    command: /bin/bash entrypoint.sh
     volumes:
       - .:/app
     ports:
       - "8000:8000"
+    environment:
+      - DB_PASSWORD=quick_borrow
+      - DB_HOST=db
+      - DJANGO_SETTINGS_MODULE=config.settings.local
     depends_on:
       - db
-      - redis
 
   db:
     image: postgres:13
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_DB=mydatabase
-      - POSTGRES_USER=myuser
-      - POSTGRES_PASSWORD=mypassword
-
-  redis:
-    image: "redis:alpine"
-
-  celery:
-    build: .
-    command: celery -A myproject worker -l info
-    volumes:
-      - .:/app
-    depends_on:
-      - db
-      - redis
-
-  celery-beat:
-    build: .
-    command: celery -A myproject beat -l info
-    volumes:
-      - .:/app
-    depends_on:
-      - db
-      - redis
+      - POSTGRES_DB=quick_borrow
+      - POSTGRES_USER=quick_borrow
+      - POSTGRES_PASSWORD=quick_borrow
 
 volumes:
   postgres_data:

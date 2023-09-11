@@ -19,11 +19,9 @@ from django.urls import include, path
 from django.views.generic import RedirectView
 
 urlpatterns = [
-    path('grappelli/', include('grappelli.urls')),
-    path('admin/', admin.site.urls),
-    path('books/', include(('books.urls', 'books'), namespace='books')),
-
-    path('auth/', include(('users.urls', 'users'), namespace='auth')),
-
-    path('', RedirectView.as_view(url='/books', permanent=False), name='index'),
+    path("grappelli/", include("grappelli.urls")),
+    path("admin/", admin.site.urls),
+    path("books/", include(("books.urls", "books"), namespace="books")),
+    path("auth/", include(("users.urls", "users"), namespace="auth")),
+    path("", RedirectView.as_view(url="/books", permanent=False), name="index"),
 ]

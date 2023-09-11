@@ -5,49 +5,44 @@ from books.models import BookLoan
 
 
 class BookLoanForm(forms.ModelForm):
+    LOAN_ACTION = "loan"
+    RETURN_ACTION = "return"
 
-    ACTION_FIELD_VALUE = 'loan'
-    action = forms.CharField(widget=forms.HiddenInput(), initial=ACTION_FIELD_VALUE)
+    action = forms.CharField(widget=forms.HiddenInput())
 
     class Meta:
         model = BookLoan
-        fields = ['action']
+        fields = ["action"]
 
     def clean(self):
         super().clean()
-        book = self.instance.book
-        action = self.cleaned_data['action']
-        if not book.is_available():
-            raise forms.ValidationError('Book is not available for loan')
-        if action != self.ACTION_FIELD_VALUE:
-            raise forms.ValidationError('Invalid action')
+        if self.cleaned_data["action"] == self.LOAN_ACTION:
+            return self._clean_loan_action()
+        elif self.cleaned_data["action"] == self.RETURN_ACTION:
+            return self._clean_return_action()
+        else:
+            raise forms.ValidationError("Invalid action")
+
+    def _clean_loan_action(self):
+        if not self.instance.book.is_available():
+            raise forms.ValidationError("Book is not available for a loan")
+        return self.cleaned_data
+
+    def _clean_return_action(self):
+        if self.instance.book.is_available():
+            raise forms.ValidationError("Book is already returned")
         return self.cleaned_data
 
     def save(self, commit=True):
+        if self.cleaned_data["action"] == self.LOAN_ACTION:
+            self._save_loan_action()
+        if self.cleaned_data["action"] == self.RETURN_ACTION:
+            self._save_return_action()
+        return super().save(commit)
+
+    def _save_loan_action(self):
         self.instance.loan_datetime = self.instance.loan_datetime or timezone.now()
         self.instance.return_datetime = None
-        return super().save(commit)
 
-
-class BookReturnForm(forms.ModelForm):
-
-    ACTION_FIELD_VALUE = 'return'
-    action = forms.CharField(widget=forms.HiddenInput(), initial=ACTION_FIELD_VALUE)
-
-    class Meta:
-        model = BookLoan
-        fields = ['action']
-
-    def clean(self):
-        super().clean()
-        book = self.instance.book
-        action = self.cleaned_data['action']
-        if book.is_available():
-            raise forms.ValidationError('Book is already returned')
-        if action != self.ACTION_FIELD_VALUE:
-            raise forms.ValidationError('Invalid action')
-        return self.cleaned_data
-
-    def save(self, commit=True):
+    def _save_return_action(self):
         self.instance.return_datetime = timezone.now()
-        return super().save(commit)

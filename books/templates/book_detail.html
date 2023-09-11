@@ -27,17 +27,19 @@
                     {% else %}
                     not returned
                     {% endif %}
-                    by {{ loan.user.full_name }}</li>
+                    by {{ loan.user.full_name }}
+                </li>
                 {% empty %}
                 No history
                 {% endfor %}
             </ul>
             <form method="post" action="{% url 'books:book_detail' uuid=book.uuid %}">
-                {{ form.as_p }}
                 {% csrf_token %}
                 {% if book.is_available %}
+                <input type="hidden" name="action" id="id_action" value="{{form.LOAN_ACTION}}">
                 <input type="submit" value="Borrow a book" class="btn btn-primary">
                 {% else %}
+                <input type="hidden" name="action" id="id_action" value="{{form.RETURN_ACTION}}">
                 <input type="submit" value="Return a book" class="btn btn-primary">
                 {% endif %}
             </form>

@@ -1,0 +1,25 @@
+[flake8]
+exclude =
+    .git,
+    .idea,
+    .venv,
+    .tox,
+    .eggs,
+    *.egg,
+    build,
+    dist,
+    settings,
+    migrations,
+    docs,
+    .pytest_cache,
+    __pycache__,
+    tests
+max-line-length = 120
+ignore =
+    W503,
+    W504,
+    F401,
+    E402,
+    E731,
+    E722,
+    E741

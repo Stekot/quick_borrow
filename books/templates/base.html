@@ -20,13 +20,17 @@
                 {% endif %}
             </li>
         </ul>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="/faq">FAQ</a>
-            </li>
-        </ul>
     </div>
 </nav>
+<div class="container mt-4">
+    {% for message in messages %}
+    <div class="container-fluid p-0">
+        <div class="alert {{ message.tags }}">
+            {{ message }}
+        </div>
+    </div>
+    {% endfor %}
+</div>
 
 {% block content %}{% endblock %}
 

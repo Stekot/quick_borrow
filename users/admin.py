@@ -31,6 +31,6 @@ class UserAdmin(UserAdminBase):
             },
         ),
     )
-    list_display = ("email", "full_name", "is_staff", 'is_superuser')
+    list_display = ("email", "full_name", "is_staff", "is_superuser")
     search_fields = ("full_name", "email")
     ordering = ("full_name",)

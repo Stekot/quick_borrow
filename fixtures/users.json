@@ -1,0 +1,46 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$CoCcJ8c429jK9whQLut7G6$KCrrr9QW0gWaEuU14GKSVnH4QLDS5sxiPtgsWQ9YeXY=",
+      "last_login": "2023-09-11T08:05:59.989Z",
+      "is_superuser": true,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-09-11T08:05:41.724Z",
+      "uuid": "6fec3890-61ae-4d6d-973c-1f213bdacfc0",
+      "full_name": "",
+      "email": "admin@example.com",
+      "created_at": "2023-09-11T08:05:41.891Z",
+      "updated_at": "2023-09-11T08:05:41.891Z",
+      "username": "admin@example.com",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$5CFVvIfDjDNiGlJ1HOzxCb$sZvpdgdkQRxk0tHFFyuCZmYTEyQrhLS+dFr4qIFCUiQ=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-09-11T08:07:10Z",
+      "uuid": "a453ae66-3358-403e-b181-b24bbe7e8433",
+      "full_name": "Anežka Sečtělá",
+      "email": "reader@example.com",
+      "created_at": "2023-09-11T08:07:10.577Z",
+      "updated_at": "2023-09-11T08:07:52.560Z",
+      "username": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
