@@ -3,14 +3,34 @@ version: '3.8'
 services:
   web:
     image: stekotek/quick_borrow:v1
-    command: /bin/bash entrypoint.sh
+    command: ["python", "manage.py", "runserver", "0.0.0.0:8000"]
     volumes:
       - .:/app
     ports:
       - "8000:8000"
+    restart: on-failure
     environment:
-      - DB_PASSWORD=quick_borrow
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
       - DB_HOST=db
+      - DB_PORT=5432
+      - DJANGO_SETTINGS_MODULE=config.settings.local
+    depends_on:
+      - db
+      - migrate
+
+  migrate:
+    image: stekotek/quick_borrow:v1
+    command: [ "python", "manage.py", "migrate", ]
+    volumes:
+      - .:/app
+    environment:
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_HOST=db
+      - DB_PORT=5432
       - DJANGO_SETTINGS_MODULE=config.settings.local
     depends_on:
       - db
@@ -20,9 +40,12 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_DB=quick_borrow
-      - POSTGRES_USER=quick_borrow
-      - POSTGRES_PASSWORD=quick_borrow
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    ports:
+      - "5432:5433"
 
 volumes:
   postgres_data:
+  pgadmin:
